@@ -1,24 +1,21 @@
-# README
+# Test App Health 24
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Heroku](https://hidden-peak-95936.herokuapp.com/)
 
-Things you may want to cover:
+## Задача
 
-* Ruby version
+Создать простое приложение, которое импортирует все коммиты из репозитории на github в базу данных (использовать PostgreSQL).
 
-* System dependencies
+Функционал: 
+На главной странице приложения вы вводите имя пользователя на гитхаб и его репозиторий и инициируете импорт (перед новым импортом очищать таблицы).
+Пример данных для импорта для пользователя thoughtbot и репозитория guides: https://api.github.com/repos/thoughtbot/guides/commits
+В БД создать 2 таблицы: 
+- commits (поля: дата коммита, user_id, хеш коммита, описание коммита)
+- users (поля: имя, email)
+Результат импорта вывести в виде таблицы с постраничной разбивкой.
+Добавить форму поиска коммитов по email'у пользователя.
+Реализовать редактирование имени пользователя у какого-либо коммита, которое производилось бы асинхронно без перезагрузки страницы (обновление модели User и у всех коммитов на видимой странице).
+Реализация импорта должна учитывать, что есть репозитории с десятками тесяч коммитов.
+Написать тесты на RSpec по импорту и моделям.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Результатом должно стать развернутое приложение (например, на heroku) и ссылка на github.
