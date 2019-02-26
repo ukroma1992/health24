@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2019-02-26 11:58:05
+  user: one
+  sha_hash: MyString
+  description: MyString
+
+two:
+  date: 2019-02-26 11:58:05
+  user: two
+  sha_hash: MyString
+  description: MyString
