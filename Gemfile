@@ -17,8 +17,10 @@ gem 'responders', '~> 2.0'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
 gem 'pagy'
-
-
+gem 'mime-types', '~> 3.0'
+gem 'http-cookie', '~> 1.0', '>= 1.0.2'
+gem 'netrc', '~> 0.11.0'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

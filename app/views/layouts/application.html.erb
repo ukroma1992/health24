@@ -12,7 +12,11 @@
   <body>
     <nav>
       <div class="nav-wrapper">
-        <%= link_to "Health24", root_path, class: "brand-logo" %>
+        <% if controller_name == 'commits' %>
+          <%= render 'commits/search' %>
+        <% else %>
+          <%= link_to "Health24", root_path, class: "brand-logo right" %>
+        <% end %>
       </div>
     </nav>
     <div class="container">
