@@ -1,1 +1,23 @@
-<%= render 'common/commits', commits: @commits %>
+<table>
+  <thead>
+    <tr>
+        <th>Date</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Sha_hash</th>
+        <th>Desription</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commits.each do |commit| %>
+      <tr>
+        <td><%= commit.date.to_time.to_formatted_s(:long) %></td>  
+        <td><%= commit.user.name %></td>
+        <td><%= commit.user.email %></td>
+        <td><%= commit.sha_hash %></td>
+        <td><%= commit.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
