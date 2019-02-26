@@ -1,6 +1,6 @@
 class CommitsController < ApplicationController
   def index
-    @commits = (@user ? @user.commits : Commit).order(:date)
+    @pagy, @commits = pagy((@user ? @user.commits : Commit).order(:date), items: 10)
     respond_with(@commits)
   end
 end

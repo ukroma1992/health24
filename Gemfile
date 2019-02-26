@@ -16,6 +16,9 @@ gem 'rest-client'
 gem 'responders', '~> 2.0'
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
+gem 'pagy'
+
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

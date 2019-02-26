@@ -16,6 +16,17 @@
       </div>
     </nav>
     <div class="container">
+      <% if flash.any? %>
+        <div class="content-wrapper buffer-both">
+          <% flash.each do |name, message| %>
+            <ul class="collection">
+              <li class="collection-item">
+                <%= content_tag :div, message, class: "flash-#{name}" %>
+              </li>
+            </ul>
+          <% end %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>
